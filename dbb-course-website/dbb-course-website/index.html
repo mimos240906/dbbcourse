@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBB Course Surabaya</title>
+    <meta name="description" content="DBB Course — Bimbingan belajar terbaik untuk Matematika, Fisika, Kimia, dan Akuntansi. Kurikulum Diknas SMP/SMA, Cambridge IGCSE/A-Level, IB DP. Proven 20+ tahun di Surabaya.">
+    <meta name="keywords" content="bimbingan belajar, les matematika, les fisika, les kimia, les akuntansi, kursus Surabaya, DBB Course, Cambridge, IB, IGCSE">
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/logo-icon.png" alt="DBB Course" class="logo-icon-img">
+                <div class="logo-text">
+                    <span class="logo-main">DBB</span>
+                    <span class="logo-sub">COURSE</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" data-i18n="nav_home">Beranda</a></li>
+                <li><a href="#about" data-i18n="nav_about">Tentang</a></li>
+                <li><a href="#programs" data-i18n="nav_programs">Program</a></li>
+                <li><a href="#location" data-i18n="nav_location">Lokasi</a></li>
+                <li><a href="#location" class="nav-cta" data-i18n="nav_contact">Hubungi Kami</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="lang-toggle" id="langToggle" aria-label="Toggle Language">
+                    <img src="assets/flag-id.png" alt="ID" class="lang-flag" id="langFlag">
+                    <span class="lang-code" id="langCode">ID</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge" data-animate>
+                <i class="fas fa-award"></i>
+                <span data-i18n="hero_badge">Terbukti 20+ Tahun</span>
+            </div>
+            <h1 class="hero-title" data-animate>
+                <span data-i18n="hero_title_1">The Best Solution</span><br>
+                <span class="hero-gradient-text" data-i18n="hero_title_2">For Your Study</span>
+            </h1>
+            <p class="hero-subtitle" data-animate data-i18n="hero_subtitle">
+                Bimbingan belajar Matematika, Fisika, Kimia & Akuntansi untuk siswa SMP, SMA, Cambridge, dan IB di Surabaya.
+            </p>
+            <div class="hero-buttons" data-animate>
+                <a href="https://wa.me/6285853706006?text=Halo%20DBB%20Course,%20saya%20ingin%20bertanya%20tentang%20program%20bimbingan%20belajar" class="btn btn-primary" id="heroCta">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-i18n="hero_cta">Daftar Sekarang</span>
+                </a>
+                <a href="#programs" class="btn btn-outline">
+                    <i class="fas fa-book-open"></i>
+                    <span data-i18n="hero_cta2">Lihat Program</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-animate>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="20">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label" data-i18n="hero_stat_years">Tahun Pengalaman</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="1000">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label" data-i18n="hero_stat_students">Total Pendaftar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="section-tag" data-i18n="about_tag">Tentang Kami</span>
+                <h2 class="section-title" data-i18n="about_title">Mengapa Memilih <span class="highlight">DBB Course</span>?</h2>
+                <p class="section-desc" data-i18n="about_desc">DBB Course adalah lembaga bimbingan belajar di Surabaya yang telah terbukti selama lebih dari 20 tahun membantu siswa meraih prestasi akademik terbaik.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card" data-animate>
+                    <div class="about-card-icon" style="--accent: #00C853;">
+                        <i class="fas fa-square-root-variable"></i>
+                    </div>
+                    <h3 data-i18n="about_math">Matematika</h3>
+                    <p data-i18n="about_math_desc">Pemahaman konsep dasar hingga advanced. Persiapan ujian nasional, Cambridge, dan IB.</p>
+                </div>
+                <div class="about-card" data-animate>
+                    <div class="about-card-icon" style="--accent: #2962FF;">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 data-i18n="about_physics">Fisika</h3>
+                    <p data-i18n="about_physics_desc">Belajar fisika dengan metode praktikal dan pemahaman mendalam, bukan sekadar hafalan rumus.</p>
+                </div>
+                <div class="about-card" data-animate>
+                    <div class="about-card-icon" style="--accent: #FF6D00;">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 data-i18n="about_chemistry">Kimia</h3>
+                    <p data-i18n="about_chemistry_desc">Kuasai kimia dari dasar hingga tingkat lanjut dengan pendekatan yang mudah dipahami.</p>
+                </div>
+                <div class="about-card" data-animate>
+                    <div class="about-card-icon" style="--accent: #FFB300;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="about_accounting">Akuntansi</h3>
+                    <p data-i18n="about_accounting_desc">Pelajari prinsip akuntansi dengan cara yang terstruktur dan aplikatif.</p>
+                </div>
+            </div>
+
+            <div class="about-highlights" data-animate>
+                <div class="highlight-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-i18n="about_h1">Pede Nilai Rapor Naik</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-i18n="about_h2">Yakin Masuk Uni Pilihan</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-i18n="about_h3">Belajar Jadi FUN!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROGRAMS SECTION ========== -->
+    <section id="programs">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="section-tag" data-i18n="programs_tag">Program Kami</span>
+                <h2 class="section-title" data-i18n="programs_title">Program Bimbingan Lengkap</span></h2>
+                <p class="section-desc" data-i18n="programs_desc">Kami menyediakan program bimbingan belajar yang disesuaikan dengan kurikulum dan kebutuhan setiap siswa.</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Kurikulum Diknas -->
+                <div class="program-card" data-animate>
+                    <div class="program-card-glow"></div>
+                    <div class="program-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="program-badge" data-i18n="programs_popular">Paling Populer</div>
+                    <h3 data-i18n="program_diknas_title">Kurikulum Diknas</h3>
+                    <p class="program-level">SMP & SMA</p>
+                    <p class="program-desc" data-i18n="program_diknas_desc">Bimbingan belajar sesuai Kurikulum Merdeka untuk siswa SMP dan SMA. Persiapan ujian sekolah dan seleksi masuk perguruan tinggi.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_diknas_f1">Matematika, Fisika, Kimia, Akuntansi</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_diknas_f2">Persiapan Ujian Nasional</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_diknas_f3">Persiapan SNBP & SNBT</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285853706006?text=Halo%20DBB%20Course,%20saya%20ingin%20bertanya%20tentang%20program%20Kurikulum%20Diknas" class="btn btn-card">
+                        <span data-i18n="program_cta">Info Selengkapnya</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Cambridge -->
+                <div class="program-card featured" data-animate>
+                    <div class="program-card-glow"></div>
+                    <div class="program-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <div class="program-badge" data-i18n="programs_international">Internasional</div>
+                    <h3>Cambridge</h3>
+                    <p class="program-level">IGCSE / O-Level / A-Level</p>
+                    <p class="program-desc" data-i18n="program_cambridge_desc">Program khusus siswa kurikulum Cambridge. Bimbingan intensif untuk IGCSE, O-Level, dan A-Level dengan tutor berpengalaman.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_cambridge_f1">Mathematics & Further Maths</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_cambridge_f2">Physics & Chemistry</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_cambridge_f3">Accounting & Economics</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285853706006?text=Halo%20DBB%20Course,%20saya%20ingin%20bertanya%20tentang%20program%20Cambridge" class="btn btn-card">
+                        <span data-i18n="program_cta">Info Selengkapnya</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- IB DP -->
+                <div class="program-card" data-animate>
+                    <div class="program-card-glow"></div>
+                    <div class="program-icon">
+                        <i class="fas fa-earth-americas"></i>
+                    </div>
+                    <div class="program-badge">IB</div>
+                    <h3>IB Diploma</h3>
+                    <p class="program-level">SL & HL</p>
+                    <p class="program-desc" data-i18n="program_ib_desc">Dukungan akademik untuk siswa International Baccalaureate Diploma Programme, baik Standard Level maupun Higher Level.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_ib_f1">Mathematics AA & AI</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_ib_f2">Physics & Chemistry SL/HL</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_ib_f3">Internal Assessment Support</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285853706006?text=Halo%20DBB%20Course,%20saya%20ingin%20bertanya%20tentang%20program%20IB%20Diploma" class="btn btn-card">
+                        <span data-i18n="program_cta">Info Selengkapnya</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Les Privat -->
+                <div class="program-card" data-animate>
+                    <div class="program-card-glow"></div>
+                    <div class="program-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="program-badge" data-i18n="programs_exclusive">Eksklusif</div>
+                    <h3 data-i18n="program_private_title">Les Privat</h3>
+                    <p class="program-level" data-i18n="program_private_level">1-on-1 Session</p>
+                    <p class="program-desc" data-i18n="program_private_desc">Bimbingan personal satu-satu dengan tutor berpengalaman. Jadwal fleksibel, materi disesuaikan kebutuhan siswa.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_private_f1">Jadwal fleksibel</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_private_f2">Materi disesuaikan</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="program_private_f3">Perhatian penuh dari tutor</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285853706006?text=Halo%20DBB%20Course,%20saya%20ingin%20bertanya%20tentang%20Les%20Privat" class="btn btn-card">
+                        <span data-i18n="program_cta">Info Selengkapnya</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOCATION SECTION ========== -->
+    <section id="location">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="section-tag" data-i18n="loc_tag">Lokasi</span>
+                <h2 class="section-title" data-i18n="loc_title">Kunjungi Cabang Kami</span></h2>
+                <p class="section-desc" data-i18n="loc_desc">Kunjungi atau hubungi kami untuk konsultasi langsung</p>
+            </div>
+
+            <div class="location-grid">
+                <!-- Branch 1: DBB Graha -->
+                <div class="location-card" data-animate>
+                    <div class="location-card-header">
+                        <div class="location-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div>
+                            <h3>DBB Graha</h3>
+                            <span class="location-label" data-i18n="loc_branch1_label">Cabang Graha</span>
+                        </div>
+                    </div>
+                    <div class="location-map" id="mapGraha"></div>
+                    <div class="location-info">
+                        <div class="location-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="loc_branch1_address">Plaza Graha Famili, blok B No No.21A, Pradahkalikendal, Kec. Dukuhpakis, Surabaya, Jawa Timur 60227</span>
+                        </div>
+                        <div class="location-detail">
+                            <i class="fas fa-clock"></i>
+                            <span data-i18n="loc_hours">Senin - Sabtu, 13:00 - 21:00</span>
+                        </div>
+                        <a href="https://wa.me/6285853706006?text=Halo%20DBB%20Graha,%20saya%20ingin%20bertanya%20tentang%20program%20bimbingan%20belajar" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>0858 5370 6006</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section id="cta">
+        <div class="container">
+            <div class="cta-content" data-animate>
+                <h2 data-i18n="cta_title">Siap Meraih Prestasi Terbaik?</h2>
+                <p data-i18n="cta_desc">Bergabunglah dengan ribuan siswa yang telah sukses bersama DBB Course. Konsultasikan kebutuhan belajar Anda sekarang!</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/6285853706006?text=Halo%20DBB%20Course,%20saya%20ingin%20konsultasi%20gratis%20tentang%20program%20bimbingan%20belajar" class="btn btn-primary btn-large">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-i18n="cta_btn">Konsultasi Gratis via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo footer-logo">
+                        <img src="assets/logo-icon.png" alt="DBB Course" class="logo-icon-img">
+                        <div class="logo-text">
+                            <span class="logo-main">DBB</span>
+                            <span class="logo-sub">COURSE</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer_tagline">The Best Solution For Your Study</p>
+                    <p class="footer-desc" data-i18n="footer_desc">Bimbingan belajar terpercaya di Surabaya sejak 2004. Matematika, Fisika, Kimia & Akuntansi untuk semua kurikulum.</p>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 data-i18n="footer_programs">Program</h4>
+                    <ul>
+                        <li><a href="#programs" data-i18n="footer_diknas">Kurikulum Diknas</a></li>
+                        <li><a href="#programs">Cambridge</a></li>
+                        <li><a href="#programs">IB Diploma</a></li>
+                        <li><a href="#programs" data-i18n="footer_private">Les Privat</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 data-i18n="footer_subjects">Mata Pelajaran</h4>
+                    <ul>
+                        <li><a href="#about" data-i18n="footer_math">Matematika</a></li>
+                        <li><a href="#about" data-i18n="footer_physics">Fisika</a></li>
+                        <li><a href="#about" data-i18n="footer_chemistry">Kimia</a></li>
+                        <li><a href="#about" data-i18n="footer_accounting">Akuntansi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact_title">Hubungi Kami</h4>
+                    <div class="footer-contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <span>DBB Graha</span>
+                            <a href="https://wa.me/6285853706006">0858 5370 6006</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DBB Course. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+    <a href="https://wa.me/6285853706006?text=Halo%20DBB%20Course,%20saya%20ingin%20bertanya" class="whatsapp-float" id="waFloat" aria-label="Chat via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip" data-i18n="wa_tooltip">Chat Kami!</span>
+    </a>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
