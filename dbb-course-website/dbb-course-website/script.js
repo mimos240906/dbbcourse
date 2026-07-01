@@ -1,10 +1,3 @@
-/* ==============================
-   DBB COURSE — JAVASCRIPT
-   Language Toggle, Animations,
-   Maps, Carousel, Interactivity
-   ============================== */
-
-// ===== TRANSLATIONS =====
 const translations = {
     id: {
         // Navbar
@@ -42,7 +35,7 @@ const translations = {
 
         // Programs
         programs_tag: "Program Kami",
-        programs_title: "Program Bimbingan Lengkap</span>",
+        programs_title: "Program <span class=\"highlight\">Bimbingan Lengkap</span>",
         programs_desc: "Kami menyediakan program bimbingan belajar yang disesuaikan dengan kurikulum dan kebutuhan setiap siswa.",
         programs_popular: "Paling Populer",
         programs_international: "Internasional",
@@ -70,7 +63,7 @@ const translations = {
 
         // Location
         loc_tag: "Lokasi",
-        loc_title: "Kunjungi Cabang Kami</span>",
+        loc_title: "Kunjungi <span class=\"highlight\">Cabang Kami</span>",
         loc_desc: "Kunjungi atau hubungi cabang DBB Course untuk konsultasi langsung.",
         loc_branch1_label: "Cabang Graha",
         loc_branch1_address: "Plaza Graha Famili, blok B No No.21A, Pradahkalikendal, Kec. Dukuhpakis, Surabaya, Jawa Timur 60227",
@@ -193,10 +186,10 @@ const translations = {
     }
 };
 
-// ===== GLOBAL STATE =====
+// GLOBAL STATE 
 let currentLang = 'id';
 
-// ===== DOM READY =====
+// DOM READY
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initLanguageToggle();
@@ -206,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
 });
 
-// ===== NAVBAR =====
+//  NAVBAR 
 function initNavbar() {
     const navbar = document.getElementById('navbar');
     const hamburger = document.getElementById('hamburger');
@@ -249,7 +242,7 @@ function initNavbar() {
     });
 }
 
-// ===== LANGUAGE TOGGLE =====
+// LANGUAGE TOGGLE 
 function initLanguageToggle() {
     const langToggle = document.getElementById('langToggle');
     const langFlag = document.getElementById('langFlag');
@@ -279,12 +272,11 @@ function applyTranslations() {
     });
 }
 
-// ===== SCROLL ANIMATIONS =====
+// SCROLL ANIMATIONS 
 function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Add staggered delay for elements in grids
                 const parent = entry.target.parentElement;
                 if (parent) {
                     const siblings = parent.querySelectorAll('[data-animate]');
@@ -307,7 +299,7 @@ function initScrollAnimations() {
     });
 }
 
-// ===== COUNTER ANIMATION =====
+// COUNTER ANIMATION 
 function initCounterAnimation() {
     const counters = document.querySelectorAll('[data-count]');
 
@@ -333,7 +325,6 @@ function animateCounter(element, target) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
 
-        // Easing function (ease-out cubic)
         const eased = 1 - Math.pow(1 - progress, 3);
         const current = Math.round(startValue + (target - startValue) * eased);
 
@@ -347,23 +338,17 @@ function animateCounter(element, target) {
     requestAnimationFrame(update);
 }
 
-// ===== LEAFLET MAPS =====
+// LEAFLET MAPS 
 function initMaps() {
-    // ============================================
-    // GANTI KOORDINAT DI BAWAH INI SESUAI LOKASI
-    // ============================================
-
-    // DBB Graha - placeholder coordinates (Graha Family area, Surabaya)
     const grahaCoords = [-7.2883, 112.6797];
 
-    // Map style - CartoDB dark theme
     const tileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
     const tileAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>';
 
     // Custom icon
     const customIcon = L.divIcon({
         className: 'custom-map-marker',
-        html: '<div style="background: linear-gradient(135deg, #00C853, #2962FF); width: 32px; height: 32px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 3px solid white; box-shadow: 0 2px 10px rgba(0,0,0,0.3);"><div style="width: 10px; height: 10px; background: white; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg);"></div></div>',
+        html: '<div style="background: #1FA660; width: 32px; height: 32px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 3px solid white; box-shadow: 0 2px 10px rgba(0,0,0,0.3);"><div style="width: 10px; height: 10px; background: white; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg);"></div></div>',
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
@@ -385,7 +370,7 @@ function initMaps() {
     }
 }
 
-// ===== SMOOTH SCROLL =====
+// SMOOTH SCROLL 
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
