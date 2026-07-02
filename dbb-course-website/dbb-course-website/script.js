@@ -9,8 +9,8 @@ const translations = {
 
         // Hero
         hero_badge: "Terbukti 20+ Tahun",
-        hero_title_1: "The Best Solution",
-        hero_title_2: "For Your Study",
+        hero_title_1: "Over 20 Years",
+        hero_title_2: "of Experience in Tutoring in Surabaya",
         hero_subtitle: "Bimbingan belajar Matematika, Fisika, Kimia & Akuntansi untuk siswa SMP, SMA, Cambridge, dan IB di Surabaya.",
         hero_cta: "Daftar Sekarang",
         hero_cta2: "Lihat Program",
@@ -75,7 +75,7 @@ const translations = {
         cta_btn: "Konsultasi Gratis via WhatsApp",
 
         // Footer
-        footer_tagline: "The Best Solution For Your Study",
+        footer_tagline: "Over 20 Years of Experience in Tutoring in Surabaya",
         footer_desc: "Bimbingan belajar terpercaya di Surabaya sejak 2004. Matematika, Fisika, Kimia & Akuntansi untuk semua kurikulum.",
         footer_programs: "Program",
         footer_diknas: "Kurikulum Diknas",
@@ -101,8 +101,8 @@ const translations = {
 
         // Hero
         hero_badge: "Proven 20+ Years",
-        hero_title_1: "The Best Solution",
-        hero_title_2: "For Your Study",
+        hero_title_1: "Over 20 Years",
+        hero_title_2: "of Experience in Tutoring in Surabaya",
         hero_subtitle: "Expert tutoring in Mathematics, Physics, Chemistry & Accounting for SMP, SMA, Cambridge, and IB students in Surabaya.",
         hero_cta: "Register Now",
         hero_cta2: "View Programs",
@@ -168,7 +168,7 @@ const translations = {
         cta_btn: "Free Consultation via WhatsApp",
 
         // Footer
-        footer_tagline: "The Best Solution For Your Study",
+        footer_tagline: "Over 20 Years of Experience in Tutoring in Surabaya",
         footer_desc: "Trusted tutoring in Surabaya since 2004. Mathematics, Physics, Chemistry & Accounting for all curricula.",
         footer_programs: "Programs",
         footer_diknas: "National Curriculum",
